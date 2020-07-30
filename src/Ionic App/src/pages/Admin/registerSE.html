@@ -1,0 +1,78 @@
+  <!-- -->
+<ion-content class="auth-page">
+    <div class="login-content">
+  
+      <!-- Logo -->
+      <div padding text-center>
+       
+        <h2 ion-text class="text-primary">
+          <strong>SE</strong> Registration
+        </h2>
+      </div>
+  
+      <!-- Login form -->
+      <form class="list-form">
+        <ion-item>
+          <ion-label floating>
+            <ion-icon name="person" item-start class="text-primary"></ion-icon>
+            Full Name
+          </ion-label>
+          <ion-input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}"></ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label floating>
+            <ion-icon name="mail" item-start class="text-primary" ></ion-icon>
+            Email
+          </ion-label>
+          <ion-input type="text" [(ngModel)]="email" [ngModelOptions]="{standalone: true}"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>
+            <ion-icon name="phone-portrait" item-start class="text-primary"></ion-icon>
+            Mobile No
+          </ion-label>
+          <ion-input type="text" [(ngModel)]="mob" [ngModelOptions]="{standalone: true}"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>
+            <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+            Password
+          </ion-label>
+          <ion-input type="password" [(ngModel)]="pwd" [ngModelOptions]="{standalone: true}"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>
+            <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+            Confirm Password
+          </ion-label>
+          <ion-input type="password" [(ngModel)]="cpwd" [ngModelOptions]="{standalone: true}"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>
+            <ion-icon name="locate" item-start class="text-primary"></ion-icon>
+            Address
+          </ion-label>
+          <ion-input type="text" [(ngModel)]="add" [ngModelOptions]="{standalone: true}"></ion-input>
+        </ion-item>
+      </form>
+  
+      <div margin-top>
+        <div style="width: 100%;float: left;">
+        <button  ion-button block color="dark" tappable (click)="register()">
+          Register
+        </button>
+      </div>
+      <div style="width: 49%;margin-left: 25%;">
+        <button  ion-button block color="dark" tappable (click)="back()">
+          Back
+        </button>
+      </div>
+      </div>
+  
+      <!-- Other links -->
+   
+  
+    </div>
+  </ion-content>
+  

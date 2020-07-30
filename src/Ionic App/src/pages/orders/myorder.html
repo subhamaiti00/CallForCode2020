@@ -1,0 +1,66 @@
+<!-- -->
+
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <strong>My</strong> Request
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button tappable (click)="presentNotifications($event)">
+        <ion-icon name="notifications"></ion-icon>
+      </button>
+      <button ion-button tappable (click)="goToAccount()">
+        <ion-icon name="cog"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="animated fadeIn common-bg">
+
+  <ion-card no-margin margin-bottom class="full-width">
+    <ion-item tappable (click)="choosePlace('from')" class="border-bottom">
+      <ion-icon name="search" color="primary" item-left></ion-icon>
+      <span>{{ search.name }}</span>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="md-calendar" color="primary" item-left></ion-icon>
+      <ion-datetime class="no-pl" displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" [(ngModel)]="search.date"></ion-datetime>
+    </ion-item>
+  </ion-card>
+
+  <button ion-button icon-start block no-margin color="primary" class="round" tappable (click)="doSearch()">
+    <ion-icon name="search"></ion-icon> Search
+  </button>
+
+</ion-content>
+<ion-content padding class="trips detail-bg">
+  <!--list of trips-->
+
+  <ion-list>
+
+    <ion-item *ngFor="let p of Products">
+     
+      <ion-thumbnail item-left>
+        
+        <img src="{{+apiurl+'S1/products/' +  p.Pimg }}">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{p.Pname}}</h2>
+        <h3>{{p.PShortDesc}}</h3>
+        <p><a href="#" style="text-decoration: none;" (click)=fnAddToCart(p.PID)>+</a>
+           &nbsp;  {{p.Qty}} &nbsp;<a style="text-decoration: none;" href="#" (click)=fnMinusFromCart(p.ID)>-</a>
+           <a href="#" class="pull-right text-blue" (click)='remove(p.ID)'>Remove</a></p>
+        
+      </ion-label>
+    </ion-item>
+    
+
+  </ion-list>
+  <div >
+    <button ion-button round  item-right block (click)='Order()'>Place Request</button>
+  </div>
+</ion-content>

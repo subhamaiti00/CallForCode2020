@@ -1,0 +1,41 @@
+<!-- -->
+<ion-content class="auth-page">
+    <div class="login-content">
+  
+      <!-- Logo -->
+      <div padding text-center>
+        <div class="logo"></div>
+        <h2 ion-text class="text-primary">
+          <strong>Select Type</strong>
+        </h2>
+      </div>
+  
+      <!-- Login form -->
+     
+  
+      <div margin-top>
+        <button ion-button block color="dark" tappable (click)="register('d')">
+         Donor
+        </button> 
+  
+      </div>
+      <div margin-top>
+        <button ion-button block color="dark" tappable (click)="register('c')">
+         Consumer/Subscriber
+        </button> 
+  
+      </div>
+      <div margin-top>
+        <button ion-button block color="dark" tappable (click)="register('v')">
+         Volunteer
+        </button> 
+  
+      </div>
+      <!-- Other links -->
+      <div text-center margin-top>
+        <span ion-text color="primary" tappable (click)="login()">I have an account</span>
+      </div>
+  
+    </div>
+  </ion-content>
+  

@@ -1,0 +1,45 @@
+<!-- -->
+<ion-header>
+    <ion-navbar color="primary">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        <strong>My</strong> Home
+      </ion-title>
+      <ion-buttons end>
+        <button ion-button tappable (click)="presentNotifications($event)">
+          <ion-icon name="notifications"></ion-icon>
+        </button>
+        <button ion-button tappable (click)="goToAccount()">
+          <ion-icon name="cog"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding class="animated fadeIn common-bg">
+  
+  
+  
+    <button ion-button icon-start block no-margin color="primary" class="round" tappable (click)="doSearch()">
+      <ion-icon name="search"></ion-icon> Search
+    </button>
+  
+  </ion-content>
+  <ion-content padding class="trips detail-bg">
+    <div margin-top>
+        <button ion-button block color="dark" tappable (click)="openrequests()">
+         Open Requests
+        </button> 
+  
+      </div>
+
+      <div margin-top>
+        <button ion-button block color="dark" tappable (click)="mydonations()">
+         My Donations
+        </button> 
+  
+      </div>
+  </ion-content>
+  

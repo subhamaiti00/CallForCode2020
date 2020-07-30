@@ -1,0 +1,19 @@
+D:\infixia projects\AMC Management\Api\Api\bin\Api.dll
+D:\infixia projects\AMC Management\Api\Api\bin\Api.pdb
+D:\infixia projects\AMC Management\Api\Api\obj\Debug\Api.dll
+D:\infixia projects\AMC Management\Api\Api\obj\Debug\Api.pdb
+D:\infixia projects\AMC Management\Api\Api\obj\Debug\Api.csprojAssemblyReference.cache
+D:\infixia projects\AMC Management\Api\Api\obj\Debug\Api.csproj.CoreCompileInputs.cache
+D:\infixia projects\ServiceBooking\Api\Api\bin\Api.dll
+D:\infixia projects\ServiceBooking\Api\Api\bin\Api.pdb
+D:\infixia projects\ServiceBooking\Api\Api\obj\Debug\Api.csproj.CoreCompileInputs.cache
+D:\infixia projects\ServiceBooking\Api\Api\obj\Debug\Api.dll
+D:\infixia projects\ServiceBooking\Api\Api\obj\Debug\Api.pdb
+D:\infixia projects\ServiceBooking\Api\Api\obj\Debug\Api.csprojAssemblyReference.cache
+D:\ionic\CommunityCoOp\OldApi\Api\bin\Api.dll.config
+D:\ionic\CommunityCoOp\OldApi\Api\bin\Api.dll
+D:\ionic\CommunityCoOp\OldApi\Api\bin\Api.pdb
+D:\ionic\CommunityCoOp\OldApi\Api\obj\Debug\Api.csproj.CoreCompileInputs.cache
+D:\ionic\CommunityCoOp\OldApi\Api\obj\Debug\Api.dll
+D:\ionic\CommunityCoOp\OldApi\Api\obj\Debug\Api.pdb
+D:\ionic\CommunityCoOp\OldApi\Api\obj\Debug\Api.csprojAssemblyReference.cache

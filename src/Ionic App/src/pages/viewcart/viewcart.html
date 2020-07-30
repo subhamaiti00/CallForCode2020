@@ -1,0 +1,87 @@
+<!-- -->
+
+<ion-header>
+    <ion-navbar color="primary">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        <strong>My</strong> Cart
+      </ion-title>
+      <ion-buttons end>
+        <button ion-button tappable (click)="presentNotifications($event)">
+          <ion-icon name="notifications"></ion-icon>
+        </button>
+        <button ion-button tappable (click)="goToAccount()">
+          <ion-icon name="cog"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+  
+
+  <ion-content padding class="trips detail-bg">
+    <!--list of trips-->
+
+    <ion-list>
+      <ion-item *ngFor="let p of Products">       
+        <ion-thumbnail item-left>          
+          <img src="{{+apiurl+'S1/products/' +  p.Pimg }}">
+        </ion-thumbnail>
+        <ion-label>
+          <h2>{{p.Pname}}</h2>
+          <h3>{{p.PShortDesc}}</h3>
+          <p>
+            <ion-icon name="add-circle" class="text-2x" tappable (click)="fnAddToCart(p.PID)" color="secondary"></ion-icon>
+             &nbsp; <span style="font-size:20px;">{{p.Qty}}</span>  &nbsp;
+             <ion-icon name="remove-circle" class="text-2x" tappable (click)="fnMinusFromCart(p.ID)" color="secondary"></ion-icon>
+             <a href="#" class="pull-right text-blue" (click)='remove(p.ID)'>Remove</a></p>
+          
+        </ion-label>
+      </ion-item>
+    </ion-list>
+    <div>
+      <button ion-button round  item-right block (click)='Order()'>Place Request</button>
+    </div>
+<span style="font-weight: bold;">Product You May Like</span>
+<br>
+<div *ngIf="visible">Loading...</div>
+<ion-list>
+
+  <ion-item *ngFor="let p of RecomProducts" style="margin-bottom: 2px;">
+   
+    <ion-thumbnail item-left >
+      
+      <img  src="{{+apiurl+'S1/products/' +  p.pimg }}">
+    </ion-thumbnail>
+    <ion-label style="display: none;"> </ion-label>
+    <ion-label >
+      <h2 style="margin-top: 1px;">{{p.pname}}</h2>         
+    <label text-wrap></label>
+        
+         <ion-select #S  style="width:20%;float:left;" data-live-search="true">
+          <ion-option value="1" selected >1</ion-option>
+          <ion-option value="2" >2</ion-option>  
+          <ion-option value="3" >3</ion-option>  
+          <ion-option value="4" >4</ion-option>  
+          <ion-option value="5" >5</ion-option>
+          <ion-option value="6" >6</ion-option>  
+          <ion-option value="7" >7</ion-option>  
+          <ion-option value="8" >8</ion-option>  
+          <ion-option value="9" >9</ion-option> 
+          <ion-option value="10" >10</ion-option>  
+
+        </ion-select>
+      
+       <button  ion-button  (click)='fnAddToCart(p.id,S.value)' style="width:30%;float:right;" class="pull-right">Add</button>
+       <button  ion-button  (click)='openModal(p.pname,p.pShortDesc,p.pimg)' style="width:30%;float:right;" class="pull-right">Details</button>
+      
+
+      
+    </ion-label>
+    
+  </ion-item>
+
+</ion-list>
+  </ion-content>
+  

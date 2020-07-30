@@ -1,0 +1,80 @@
+<!-- -->
+<ion-header>
+    <ion-navbar color="primary">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        <strong>My Service Log</strong> 
+      </ion-title>
+      <ion-buttons end>
+        <button ion-button tappable (click)="presentNotifications($event)">
+          <ion-icon name="notifications"></ion-icon>
+        </button>
+        <button ion-button tappable (click)="goToAccount()">
+          <ion-icon name="cog"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding class="animated fadeIn common-bg">
+  
+    <ion-card no-margin margin-bottom class="full-width">
+      <ion-item tappable (click)="choosePlace('from')" class="border-bottom">
+        <ion-icon name="search" color="primary" item-left></ion-icon>
+        <span>{{ search.name }}</span>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="md-calendar" color="primary" item-left></ion-icon>
+        <ion-datetime class="no-pl" displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" [(ngModel)]="search.date"></ion-datetime>
+      </ion-item>
+    </ion-card>
+  
+    <button ion-button icon-start block no-margin color="primary" class="round" tappable (click)="doSearch()">
+      <ion-icon name="search"></ion-icon> Search
+    </button>
+  
+  </ion-content>
+  <ion-content padding class="trips detail-bg">
+    <!--list of trips-->
+    <ion-list class="item-text-wrap">
+
+      <ion-item *ngFor="let p of Orders" style="margin-bottom: 2px;" class="item-text-wrap">
+       <div style="word-wrap: break-word;" tappable>
+        <h2>{{p.UName}}</h2>
+        <span>Date : <strong>{{p.Date}}</strong></span> &nbsp;        
+        <p style="word-wrap: break-word;">
+         Address : {{p.Address}}</p>
+         {{p.City}}-{{p.Pin}}
+       </div>
+      
+
+        
+      </ion-item>
+
+    </ion-list>
+
+  
+    <!--<div class="trip card" *ngFor="let p of Products" tappable (click)="Products(p.ID)" margin-bottom>
+      <div class="background border-bottom" [ngStyle]="{'background-image': 'url('+apiurl+'S1/products/' + p.Pimg + ')'}">
+        <div class="background-filter rlt">
+          <div class="align-bottom" padding-left padding-right>
+            <h6 class="pull-left text-white" ion-text>{{ p.Pname }}</h6>
+            <h6 class="pull-right text-white" ion-text>INR {{ p.Price}}</h6>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+      <div class="padding-sm">
+        
+        <button  ion-button  (click)='fnOrderNow(p.ID)' class="pull-left">Order Now</button>
+        
+                    
+      </div> 
+    </div>
+  -->
+
+  </ion-content>
+
+  

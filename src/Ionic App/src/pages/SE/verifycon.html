@@ -1,0 +1,58 @@
+<!-- -->
+
+<ion-header>
+    <ion-navbar color="primary">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        <strong>Verify</strong> Consumers
+      </ion-title>
+      <ion-buttons end>
+        <button ion-button tappable (click)="presentNotifications($event)">
+          <ion-icon name="notifications"></ion-icon>
+        </button>
+        <button ion-button tappable (click)="goToAccount()">
+          <ion-icon name="cog"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding class="animated fadeIn common-bg">
+  
+    <ion-card no-margin margin-bottom class="full-width">
+      <ion-item tappable (click)="choosePlace('from')" class="border-bottom">
+        <ion-icon name="search" color="primary" item-left></ion-icon>
+        <span>{{ search.name }}</span>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="md-calendar" color="primary" item-left></ion-icon>
+        <ion-datetime class="no-pl" displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" [(ngModel)]="search.date"></ion-datetime>
+      </ion-item>
+    </ion-card>
+  
+    <button ion-button icon-start block no-margin color="primary" class="round" tappable (click)="doSearch()">
+      <ion-icon name="search"></ion-icon> Search
+    </button>
+  
+  </ion-content>
+  <ion-content padding class="trips detail-bg">
+    <!--list of trips-->
+
+    <ion-list>  
+      <ion-item *ngFor="let p of consumers">     
+        <ion-label>
+          <h2>Name : {{p.UName}}</h2>
+          <h3>Address : {{p.Address}} {{p.Pin}}</h3>
+          <h3>{{p.Dist}} {{p.State}}</h3>
+          <h4>Mob.No : {{p.Mobile}}</h4>
+          <h4>Occupation : {{p.occupation}}</h4>
+          <button  ion-button  (click)='approve(p.ID)' style="width:30%;" >Approve</button>
+          <button  ion-button  (click)='reject(p.ID)' style="width:30%;" >Reject</button>         
+        </ion-label>
+      </ion-item>    
+    </ion-list>
+    
+  </ion-content>
+  

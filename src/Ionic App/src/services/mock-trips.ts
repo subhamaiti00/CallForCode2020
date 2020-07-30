@@ -1,0 +1,73 @@
+export let TRIPS = [
+  {
+    id: 1,
+    name: "Sofa Cleaning",
+    price_adult: 6000.00,
+    price_child: 30,
+    time: "12h",
+    free_cancellation: 1,
+    electric_voucher: 1,
+    sub_name: "English Commentary Tour",
+    thumb: "assets/img/Services/sofa-cleaning_1.jpg",
+    description: "Mechanized Equipment & Professional Sofa Cleaning by Experts at Urban Company. Book Now! Trained & Background Verified Sofa Cleaning Professionals at Your Doorstep.",
+    location: "Rio de Janeiro, Brazil",
+    images: [
+      "assets/img/trip/thumb/trip_5.jpg",
+      "assets/img/trip/thumb/trip_6.jpg",
+      "assets/img/trip/thumb/trip_7.jpg",
+      "assets/img/trip/thumb/trip_8.jpg",
+    ],
+    highlights: [
+      "Numerous kiosks",
+      "First in a string of Atlantic Ocean-facing beaches",
+      "Sand is flanked by mountains in the background",
+      "Swing in the turquoise waters",
+      "Water Sports",
+    ]
+  },
+  {
+    id: 2,
+    name: "Laundry Services",
+    price_adult: 900,
+    price_child: 700,
+    time: "4h",
+    free_cancellation: 1,
+    electric_voucher: 1,
+    sub_name: "English Commentary Tour",
+    thumb: "assets/img/Services/dry.jpg",
+    description: "We are talking about everything from your socks to your dry-cleaning. We do sorting, pre-treat, washing, drying, as well as fold your laundry facility that you look.",
+    location: "Rio de Janeiro, Brazil",
+    images: [],
+    highlights: []
+  },
+  {
+    id: 3,
+    name: "Garden Cleaning",
+    price_adult: 30,
+    price_child: 15,
+    time: "6h",
+    free_cancellation: 1,
+    electric_voucher: 1,
+    sub_name: "English Commentary Tour",
+    thumb: "assets/img/Services/garden.jpg",
+    description: "We do good job for a good price : Cut trees Put turf Cut grass Trimming Clean garden Slabbing Take rubbish and many more ..for a good price.",
+    location: "São Paulo, Brazil",
+    images: [],
+    highlights: []
+  },
+  {
+    id: 4,
+    name: "House Cleaning",
+    price_adult: 1500,
+    price_child: 1250,
+    time: "3h",
+    free_cancellation: 1,
+    electric_voucher: 1,
+    sub_name: "English Commentary Tour",
+    thumb: "assets/img/Services/house.jpg",
+    description: "Everyone enjoys a clean home and as the old saying goes, a clean home is a happy home. Leaving a house untidy only invites germs, pest and insects and the .",
+    location: "Fernando de Noronha, Brazil",
+    images: [],
+    highlights: []
+  }
+]
